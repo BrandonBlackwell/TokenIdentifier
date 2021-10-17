@@ -4,36 +4,29 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
-
 using namespace std;
 
 int main()
 {
-   
-    
-    
-    ifstream gags; //Stream to store and file name is made
-    gags.open("in.txt"); //"gags" file is opened 
+    ifstream input; //Stream to store and file name is made
+    input.open("in.txt"); //"input" file is opened 
    
     //if the file doesnt open tell user it doesnt work
-    if (!gags)
+    if (!input)
     {
         cout << "Not working" << endl;
     }
     //while the file "gags" is open read gags into string called "inStr"
-    while (gags)
+    while (input)
     {
-        string inStr((istreambuf_iterator<char>(gags)),
+        string inStr((istreambuf_iterator<char>(input)),
             istreambuf_iterator<char>());
+        input.close();
         
-        int i =0; //initialization of 'i' which is an int data type 
+        int i =0; 
         char operators[21] = { '=','+', '-','*','/','%','&','|','^','<','>','!','(',')','.','[',']',';',':',}; //intialization of array for operators
-        //char operators[48] = { '<<','>>','&^','+=','-=','*=','/=','%=','&=','|=','^=','<<=','>>=','&^=','&&','||','<-','++','--','==','<','>','=','!','!=','<=','>=',':=','...','(','[','{',' ,','.',')',']','}',';',':' };
-
+        
         //create loop to read through string to find if there is an "identifier" or "operator"
-        //"isaplha" checks if character is alphabetic
-        //"isdigit" checks if character is a number
         while (inStr[i]) {
             if (isalpha(inStr[i])) printf("character %c is identifier\n", inStr[i]);
 
@@ -52,13 +45,7 @@ int main()
 
     }
 
-   
-    gags.close();
     return 0;
-    
-   // system("pause>0");
-
-    
 }
 
 
