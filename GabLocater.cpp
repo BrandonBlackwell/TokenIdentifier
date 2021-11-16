@@ -38,7 +38,7 @@ int main()
                 }
                 else if (inStr[i] == ' ') //printf("%c \n", inStr[i]);
                 {
-                    cout << "\n" << endl;
+                    cout << "\n";
                 }
                 else if ((inStr[i] == operators[0]) || (inStr[i] == operators[1]) || (inStr[i] == operators[2]) || (inStr[i] == operators[3]) || (inStr[i] == operators[4]) || (inStr[i] == operators[5]) || (inStr[i] == operators[6]) || (inStr[i] == operators[7]) || (inStr[i] == operators[8]) || (inStr[i] == operators[9]) || (inStr[i] == operators[10]) || (inStr[i] == operators[11]) || (inStr[i] == operators[12]) || (inStr[i] == operators[13]) || (inStr[i] == operators[14]) || (inStr[i] == operators[15]) || (inStr[i] == operators[16]) || (inStr[i] == operators[17])
                     || (inStr[i] == operators[18]))
